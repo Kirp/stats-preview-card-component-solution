@@ -28,7 +28,6 @@ body {
 main {
   display: flex;
   width: 70%;
-  max-width: 1000px;
   background-color: hsl(244deg, 38%, 16%);
   border-radius: 8px;
 }
@@ -53,6 +52,11 @@ main .img-side-mobile-wrapper .img-side-mobile-blocker {
   top: 0;
 }
 main .info-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
   padding: 3rem;
 }
 main .info-side h1 {
@@ -64,17 +68,18 @@ main .info-side h1 span {
   color: hsl(277deg, 64%, 61%);
 }
 main .info-side .main-text {
+  width: 65%;
   font-family: LexendDeca;
   font-size: 0.75rem;
   line-height: 1.5rem;
   padding: 2rem 0;
   color: hsla(0deg, 0%, 100%, 0.75);
   opacity: 0.75;
+  text-align: left;
 }
 main .info-side .stats {
-  padding-top: 4rem;
+  padding-top: 3rem;
   display: flex;
-  justify-content: left;
 }
 main .info-side .stats div {
   padding-right: 20%;
@@ -91,33 +96,46 @@ main .info-side .stats div .stat-description {
   opacity: 0.75;
   font-size: 0.75rem;
 }
-main .img-side-desktop {
+main .img-side-desktop-wrapper {
   border-radius: 8px;
+  width: 50%;
+}
+main .img-side-desktop-wrapper .img-side-desktop {
+  border-radius: 0px 8px 8px 0px;
+  width: 100%;
+  min-width: 475px;
+  height: 100%;
+  min-height: 396px;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1200px) {
   main {
     flex-direction: column;
-    justify-content: center;
-    width: 310px;
+    align-items: center;
+    align-content: center;
+    width: 78%;
+    min-width: 250px;
   }
   main .info-side {
+    width: 90%;
     padding: 0;
   }
   main .info-side h1 {
+    width: 80%;
     text-align: center;
     padding-top: 1em;
     font-size: 1.5em;
   }
   main .info-side .main-text {
-    padding: 1em 0;
+    width: 80%;
+    padding: 0.7em 0;
+    line-height: 1.75em;
+    font-size: 0.8em;
     text-align: center;
-    font-size: 0.75em;
   }
   main .info-side .stats {
     padding-top: 0.5em;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
   main .info-side .stats div {
@@ -128,7 +146,7 @@ main .img-side-desktop {
   main .img-side-mobile-wrapper {
     display: initial;
   }
-  main .img-side-desktop {
+  main .img-side-desktop-wrapper {
     display: none;
   }
 }

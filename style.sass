@@ -42,7 +42,7 @@ body
 main
     display: flex
     width: 70%
-    max-width: 1000px
+    // max-width: 1000px
     background-color: $Dark_desaturated_blue
     border-radius: 8px
     .img-side-mobile-wrapper
@@ -63,6 +63,11 @@ main
             opacity: 0.3
             top:0   
     .info-side
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        width: 50%
         padding: 3rem
         h1
             font-family: Inter
@@ -71,17 +76,18 @@ main
             span
                 color: $Soft_violet
         .main-text
-            // width:80%
+            width: 65%
             font-family: LexendDeca
             font-size: 0.75rem
             line-height: 1.5rem
             padding: 2rem 0
             color: $Slightly_transparent_white
             opacity: 0.75
+            text-align: left
         .stats
-            padding-top: 4rem
+            padding-top: 3rem
             display: flex
-            justify-content: left
+            // justify-content: left
             div
                 padding-right: 20%
                 .stat-heading
@@ -94,38 +100,51 @@ main
                     color: $Slightly_transparent_white_stat
                     opacity: 0.75
                     font-size: 0.75rem
-    .img-side-desktop
+    .img-side-desktop-wrapper
         border-radius: 8px
+        width: 50%
+        .img-side-desktop
+            border-radius: 0px 8px 8px 0px
+            width: 100%
+            min-width: 475px
+            height: 100%
+            min-height: 396px
 
-@media(max-width:1300px)
+@media(max-width: 1200px)
     main
         flex-direction: column
-        justify-content: center
-        width: 310px
+        align-items: center
+        align-content: center
+        // width: 310px
+        width: 78%
+        min-width: 250px
         .info-side
+            width: 90%
             padding: 0
             h1
+                width: 80%
                 text-align: center
                 padding-top: 1em
                 font-size: 1.5em
             .main-text
-                padding: 1em 0
+                // display: inline-block
+                width: 80%
+                padding: .7em 0
+                line-height: 1.75em
+                font-size: 0.80em
                 text-align: center
-                font-size: 0.75em
             .stats
                 padding-top: 0.5em
                 flex-direction: column
-                justify-content: center
+                // justify-content: center
                 align-items: center
                 div
                     text-align: center
                     padding-right: 0
                     padding-bottom: 1.5em
-
-            
         .img-side-mobile-wrapper
             display: initial
-        .img-side-desktop
+        .img-side-desktop-wrapper
             display: none
         
         
