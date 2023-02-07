@@ -1,0 +1,143 @@
+
+@font-face 
+    font-family: Inter 
+    src: url(./fonts/Inter-VariableFont_slnt_wght.ttf)
+
+@font-face 
+    font-family: LexendDeca 
+    src: url(./fonts/LexendDeca-VariableFont_wght.ttf)
+
+
+//Primary
+
+$Very_dark_blue: hsl(233, 47%, 7%) //main background
+$Dark_desaturated_blue: hsl(244, 38%, 16%) //card background
+$Soft_violet: hsl(277, 64%, 61%) //accent
+
+//Neutral
+
+$White: hsl(0, 0%, 100%) //main heading, stats
+$Slightly_transparent_white: hsla(0, 0%, 100%, 0.75) //main paragraph
+$Slightly_transparent_white_stat: hsla(0, 0%, 100%, 0.6) //stat headings
+    
+
+
+*
+    margin: 0
+    padding: 0
+
+body
+    font-size: 15px
+    background-color: $Very_dark_blue
+    color: $White
+
+.wrapper
+    width: 100vw
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    
+
+main
+    display: flex
+    width: 70%
+    max-width: 1000px
+    background-color: $Dark_desaturated_blue
+    border-radius: 8px
+    .img-side-mobile-wrapper
+        position: relative
+        display: none
+        border-radius: inherit
+        .img-side-mobile
+            width: 100%
+            height: 100%
+            opacity: 0.5
+            border-radius: inherit
+        .img-side-mobile-blocker
+            position: absolute
+            content: ""
+            background-color: darkviolet
+            width: 100%
+            height: 98.5%
+            opacity: 0.3
+            top:0   
+    .info-side
+        padding: 3rem
+        h1
+            font-family: Inter
+            font-weight: 700
+            font-size: 2em
+            span
+                color: $Soft_violet
+        .main-text
+            // width:80%
+            font-family: LexendDeca
+            font-size: 0.75rem
+            line-height: 1.5rem
+            padding: 2rem 0
+            color: $Slightly_transparent_white
+            opacity: 0.75
+        .stats
+            padding-top: 4rem
+            display: flex
+            justify-content: left
+            div
+                padding-right: 20%
+                .stat-heading
+                    font-family: Inter
+                    color: $White
+                    font-family: Inter
+                    font-size: 1.5rem
+                .stat-description
+                    font-family: Inter
+                    color: $Slightly_transparent_white_stat
+                    opacity: 0.75
+                    font-size: 0.75rem
+    .img-side-desktop
+        border-radius: 8px
+
+@media(max-width:1300px)
+    main
+        flex-direction: column
+        justify-content: center
+        width: 310px
+        .info-side
+            padding: 0
+            h1
+                text-align: center
+                padding-top: 1em
+                font-size: 1.5em
+            .main-text
+                padding: 1em 0
+                text-align: center
+                font-size: 0.75em
+            .stats
+                padding-top: 0.5em
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                div
+                    text-align: center
+                    padding-right: 0
+                    padding-bottom: 1.5em
+
+            
+        .img-side-mobile-wrapper
+            display: initial
+        .img-side-desktop
+            display: none
+        
+        
+        
+       
+    
+    
+.attribution 
+    display: none
+    position: fixed
+    bottom: 1px
+    font-size: 11px
+    text-align: center
+    a
+        color: hsl(228, 45%, 44%)
